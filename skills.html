@@ -4,8 +4,79 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Skills | E-Portfolio</title>
-  <link rel="stylesheet" href="style.css">
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f4f4f4;
+    }
+
+    header {
+      background: #085AB0;
+      color: white;
+      padding: 15px 0;
+      text-align: center;
+    }
+
+    nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 10px 0 0 0;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav a.active {
+      text-decoration: underline;
+    }
+
+    main {
+      max-width: 900px;
+      margin: auto;
+      padding: 20px;
+      text-align: center; /* CENTER EVERYTHING */
+    }
+
+    h2 {
+      margin-top: 40px;
+      color: #333;
+    }
+
+    .skills-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center; /* CENTER GRID ITEMS */
+      gap: 15px;
+      margin-top: 20px;
+    }
+
+    .skills-grid span {
+      background: #085AB0;
+      padding: 10px 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      font-size: 16px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 15px;
+      background: #333;
+      color: white;
+      margin-top: 40px;
+    }
+  </style>
 </head>
+
 <body>
   <header>
     <h1>Skills</h1>
@@ -23,8 +94,8 @@
   </header>
 
   <main>
-    <section class="skills">
-     <h2>Technical Skills</h2>
+    <section class="skills-section">
+      <h2>Technical Skills</h2>
       <div class="skills-grid">
         <span>HTML</span>
         <span>CSS</span>
@@ -35,9 +106,10 @@
         <span>Install & Configure Computer Systems</span>
         <span>Setup Computer Networks</span>
         <span>Setup Computer Servers</span>
-      </div> 
+      </div>
+    </section>
 
-      <section class="skills-section">
+    <section class="skills-section">
       <h2>Soft Skills</h2>
       <div class="skills-grid">
         <span>Teamwork</span>
@@ -46,20 +118,20 @@
         <span>Adaptability</span>
         <span>Problem Solving</span>
       </div>
-      </section>
+    </section>
 
-      <section class="skills-section">
+    <section class="skills-section">
       <h2>Languages</h2>
       <div class="skills-grid">
         <span>Filipino</span>
         <span>English</span>
       </div>
-      </section>
+    </section>
   </main>
 
   <footer>
     <p>&copy; 2025 Labaguis. All Rights Reserved.</p>
   </footer>
+
 </body>
 </html>
-
