@@ -4,7 +4,19 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>About Me | E-Portfolio</title>
-  <link rel="stylesheet" href="style.css">
+  <style>
+    body { font-family: Arial, sans-serif; margin: 0; padding: 0; background: #f4f4f4; }
+    header { background: #333; color: #fff; padding: 15px; text-align: center; }
+    nav ul { list-style: none; padding: 0; margin: 0; display: flex; justify-content: center; }
+    nav ul li { margin: 0 10px; }
+    nav ul li a { color: #fff; text-decoration: none; font-weight: bold; }
+    nav ul li a.active { text-decoration: underline; }
+    main { max-width: 900px; margin: 20px auto; background: #fff; padding: 20px; border-radius: 10px; }
+    .profile-container { text-align: center; margin-bottom: 20px; }
+    .profile-container img { width: 180px; height: 180px; border-radius: 50%; object-fit: cover; border: 3px solid #333; }
+    .upload-btn { margin-top: 10px; }
+    footer { text-align: center; padding: 15px; background: #333; color: #fff; margin-top: 20px; }
+  </style>
 </head>
 <body>
   <header>
@@ -24,18 +36,39 @@
 
   <main>
     <section>
-      <h2>About Me</h2>
-      Hello! I’m <strong>John Paul M. Labaguis</strong>, a college student from 
+      <h2 style="text-align:center;">About Me</h2>
+
+      <div class="profile-container">
+        <img id="profilePreview"paul.jpg" alt="Profile Image">
+        <div class="upload-btn">
+          <input type="file" id="profileInput" accept="image/*">
+        </div>
+      </div>
+
+      <p style="text-align:center;">Hello! I’m <strong>John Paul M. Labaguis</strong>, a college student from 
       <em>Colegio de Montalban</em> taking up Bachelor of Science in Information Technology.
-      I’m passionate about computers and technology. and also passionate musician rap artist and song writer.
+      I’m passionate about computers and technology. I am also a passionate musician, rap artist, and songwriter.</p>
     </section>
   </main>
 
   <footer>
     <p>&copy; 2025 Labaguis. All Rights Reserved.</p>
   </footer>
+
+  <script>
+    const input = document.getElementById('profileInput');
+    const preview = document.getElementById('profilePreview');
+
+    input.addEventListener('change', function () {
+      const file = this.files[0];
+      if (file) {
+        const reader = new FileReader();
+        reader.onload = function (e) {
+          preview.src = e.target.result;
+        };
+        reader.readAsDataURL(file);
+      }
+    });
+  </script>
 </body>
 </html>
-
-
-
